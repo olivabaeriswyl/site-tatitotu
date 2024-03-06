@@ -1,0 +1,27 @@
+
+.button {
+  font-size: 18px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button.challenge {
+  padding: 2px 10px;
+  background-color: var(--button-color);
+  transition: 0.5s background ease;
+}
+
+.button.challenge:hover {
+  background-color: var(--button-hover-color);
+}
+
+.button.large {
+  padding: 6px 10px;
+  background-color: black;
+  transition: 0.5s background ease;
+}
+
+.button.large:hover {
+  background-color: var(--button-large-hover-color);
+}

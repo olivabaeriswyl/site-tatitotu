@@ -3,6 +3,9 @@
 // ==================================== */
 
 :root {
+  --button-color: #89A9E7; 
+  --button-hover-color: black;
+  --button-large-hover-color: #E16064;
 }
 
 /* ====================================
@@ -53,4 +56,30 @@ video {
 	padding-bottom: 12px; 
 	background-color: rgba(86, 61, 124, .15); 
 	border: 1px solid rgba(86, 61, 124, .2); 
+}
+
+body {
+  font-family: gill-sans-nova, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: piepie, sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: 700px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
