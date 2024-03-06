@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>eikon parcel starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/main.scss" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Tatitotu</h1>
+            <p>Défis de conjugaison</p>
+          </div>
+          <div class="col">
+            <label for="sobre"><input type="radio" id="sobre" name="style-choice" value="sobre"/> Style Sobre</label>
+            <label for="creative"><input type="radio" id="creative" name="style-choice" value="creative"/> Style Créatif</label>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 order-2 col-md-6 order-md-1">
+            <a href="">Exercer</a>
+            <a href="">Imprimer</a>
+          </div>
+          <div class="col-12 order-1 col-md-6 order-md-1">
+            <a href="">Besoin d'aide</a>
+          </div>
+        </div>
+        <div></div>
+        <div class="row">
+          <div class="col">
+            <label for="code"><input type="text" id="code" name="user-code" placeholder="Code à 8 chiffres..."></label>
+            <label for="load-challenge"><button>Charger mon défi</button></label>
+            <label for="save-challenge"><button>Sauvegarder mon défi</button></label>
+            <label for="presets"><button>Préréglages</button></label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-7">
+            <div class="row">
+              <div class="col-12">
+                <div class="flexbox-row">
+                  <h2>Mes verbes</h2>
+                  <button>Tout supprimer</button>
+                </div>
+              </div>
+              <div class="col-5">
+                <label for="add-verb"><input type="text" id="add-verb" name="add-verb" placeholder="Ajouter un verbe..."></label>
+              </div>
+              <div class="col-7">
+
+              </div>
+            </div>
+          
+
+            <div class="row">
+              <div class="col-12">
+                <h2>Options</h2>
+              </div>
+              <div class="col-5">
+                <p>
+                  Nombre de question<br>
+                  Type
+                </p>
+              </div>
+              <div class="col-7">
+                <label for="questions-number">
+                  <select name="questions-number" id="questions-number">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                  </select>
+                </label><br/>
+                <label for="type-normal"><input type="radio" id="type-normal" name="type-choice" value="type-normal"/> Normal</label>
+                <label for="type-tenses"><input type="radio" id="type-tenses" name="type-choice" value="type-tenses"/> Trouver mode et temps</label>
+              </div>
+              <div class="col-12">
+                <h3>options d'impression</h3>
+
+              </div>
+              <div class="col-6">
+                <label for="printing-verbs-evaluated"><input type="checkbox" name="printing-verbs-evaluated" id="printing-verbs-evaluated">Afficher les verbes évalués</label><br/>
+                <label for="printing-tenses-evaluated"><input type="checkbox" name="printing-tenses-evaluated" id="printing-tenses-evaluated">Afficher les temps évalués</label><br/>
+                <label for="printing-inclusive-pronouns"><input type="checkbox" name="printing-inclusive-pronouns" id="printing-inclusive-pronouns">Afficher les pronoms inclusifs</label><br/>
+                <label for="printing-random-number"><input type="checkbox" name="printing-random-number" id="printing-random-number">Afficher le nombre aléatoire</label>
+              </div>
+              <div class="col-6">
+                <label for="printing-exam-note"><input type="checkbox" name="printing-exam-note" id="printing-exam-note">Espace pour la note</label><br/>
+                <label for="printing-first-name"><input type="checkbox" name="printing-first-name" id="printing-first-name">Espace pour le prénom</label><br/>
+                <label for="printing-name"><input type="checkbox" name="printing-name" id="printing-name">Espace pour le nom</label><br/>
+                <label for="printing-date"><input type="checkbox" name="printing-date" id="printing-date">Espace pour la date</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <div class="row">
+              <div class="col">
+                <div class="flexbox-row">
+                  <h2>Mes temps</h2>
+                  <button>Tout cocher</button>
+                  <button>Tout décocher</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h3>Indicatif</h3>
+                <div class="flexbox-row">
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Présent</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Imparfait</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Futur</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé simple</label><br/>
+                  </div>
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé composé</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Plus-que-parfait</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Futur antérieur</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé antérieur</label><br/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h3>Impératif</h3>
+                <div class="flexbox-row">
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Présent</label><br/>
+                  </div>
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé</label><br/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h3>Subjonctif</h3>
+                <div class="flexbox-row">
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Présent</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé</label><br/>
+                  </div>
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Imparfait</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Plus-que-parfait</label><br/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h3>Conditionnel</h3>
+                <div class="flexbox-row">
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Présent</label><br/>
+                  </div>
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé 1</label><br/>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé 2</label><br/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h3>Participe</h3>
+                <div class="flexbox-row">
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Présent</label><br/>
+                  </div>
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé</label><br/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <h3>Gérondif</h3>
+                <div class="flexbox-row">
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Présent</label><br/>
+                  </div>
+                  <div>
+                    <label for="p"><input type="checkbox" name="p" id="p">Passé</label><br/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-5 offset-1">
+            <h3>à propos</h3>
+            <p>Présentation</p>
+          </div>
+          <div class="col-5">
+            <h3>contact</h3>
+            <a href="mailto:christophe.roulet@edu-vd.ch">christophe.roulet@edu-vd.ch</a><br/>
+            <a href="">Admin</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
