@@ -31,6 +31,7 @@
           <div class="col-12 order-2 col-md-6 order-md-1">
             <label for="practise-challenge"><button class="button large">Exercer <img src="img/edit-icon.svg" alt=""></button></label>
             <label for="print-challenge"><button class="button large">Imprimer <img src="img/print-icon.svg" alt=""></button></label>
+            <img src="img/underline.png" alt="">
           </div>
           <div class="col-12 order-1 col-md-6 order-md-1">
             <label for="help-website"><button class="button large">Besoin d'aide <img src="img/question-icon.svg" alt=""></button></label>
@@ -99,16 +100,16 @@
                 </div>
                 <div class="flexbox-row">
                   <div class="col-6">
-                    <label for="printing-verbs-evaluated"><input type="checkbox" name="printing-verbs-evaluated" id="printing-verbs-evaluated">Afficher les verbes évalués</label><br/>
-                    <label for="printing-tenses-evaluated"><input type="checkbox" name="printing-tenses-evaluated" id="printing-tenses-evaluated">Afficher les temps évalués</label><br/>
-                    <label for="printing-inclusive-pronouns"><input type="checkbox" name="printing-inclusive-pronouns" id="printing-inclusive-pronouns">Afficher les pronoms inclusifs</label><br/>
-                    <label for="printing-random-number"><input type="checkbox" name="printing-random-number" id="printing-random-number">Afficher le nombre aléatoire</label>
+                    <include src="components/switch.html" locals='{"label":"Afficher les verbes évalués", "name":"print", "value":"print-verb-evaluted"}'></include><br/>
+                    <include src="components/switch.html" locals='{"label":"Afficher les temps évalués", "name":"print", "value":"print-tenses-evaluated"}'></include><br/>
+                    <include src="components/switch.html" locals='{"label":"Afficher les pronoms inclusifs", "name":"print", "value":"print-inclusive-pronouns"}'></include><br/>
+                    <include src="components/switch.html" locals='{"label":"Afficher le nombre aléatoire", "name":"print", "value":"print-random-number"}'></include>
                   </div>
                   <div class="col-6">
-                    <label for="printing-exam-note"><input type="checkbox" name="printing-exam-note" id="printing-exam-note">Espace pour la note</label><br/>
-                    <label for="printing-first-name"><input type="checkbox" name="printing-first-name" id="printing-first-name">Espace pour le prénom</label><br/>
-                    <label for="printing-name"><input type="checkbox" name="printing-name" id="printing-name">Espace pour le nom</label><br/>
-                    <label for="printing-date"><input type="checkbox" name="printing-date" id="printing-date">Espace pour la date</label>
+                    <include src="components/switch.html" locals='{"label":"Espace pour la note", "name":"tense", "value":"print-exam-note"}'></include><br/>
+                    <include src="components/switch.html" locals='{"label":"Espace pour le prénom", "name":"tense", "value":"print-first-name"}'></include><br/>
+                    <include src="components/switch.html" locals='{"label":"Espace pour le nom", "name":"tense", "value":""}'></include><br/>
+                    <include src="components/switch.html" locals='{"label":"Espace pour la date", "name":"tense", "value":""}'></include>
                   </div>
                 </div>
               </div>
@@ -131,18 +132,16 @@
                   <h3>Indicatif</h3>
                   <div class="flexbox-row">
                     <div>
-                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"present"}'></include>
-                      <include src="components/switch.html" locals='{"label":"Imparfait", "name":"tense", "value":"imparfait"}'></include>
-                      <label for="ind-pre"><input type="checkbox" name="ind-pre" id="ind-pre">Présent</label><br/>
-                      <label for="ind-imp"><input type="checkbox" name="ind-imp" id="ind-imp">Imparfait</label><br/>
-                      <label for="ind-fu"><input type="checkbox" name="ind-fu" id="ind-fu">Futur</label><br/>
-                      <label for="ind-pa-s"><input type="checkbox" name="ind-pa-s" id="ind-pa-s">Passé simple</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"present"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Imparfait", "name":"tense", "value":"imparfait"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Futur", "name":"tense", "value":"futur"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé simple", "name":"tense", "value":"passesimple"}'></include>
                     </div>
                     <div>
-                      <label for="ind-pa-c"><input type="checkbox" name="ind-pa-c" id="ind-pa-c">Passé composé</label><br/>
-                      <label for="ind-plus"><input type="checkbox" name="ind-plus" id="ind-plus">Plus-que-parfait</label><br/>
-                      <label for="ind-fu-ant"><input type="checkbox" name="ind-fu-ant" id="ind-fu-ant">Futur antérieur</label><br/>
-                      <label for="ind-pa-ant"><input type="checkbox" name="ind-pa-ant" id="ind-pa-ant">Passé antérieur</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé composé", "name":"tense", "value":"passecompose"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Plus-que-parfait", "name":"tense", "value":"plusqueparfait"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Futur antérieur", "name":"tense", "value":"futuranterieur"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé antérieur", "name":"tense", "value":"passeanterieur"}'></include>
                     </div>
                   </div>
                 </div>
@@ -150,10 +149,10 @@
                   <h3>Impératif</h3>
                   <div class="flexbox-row">
                     <div>
-                      <label for="imp-pre"><input type="checkbox" name="imp-pre" id="imp-pre">Présent</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"imp-present"}'></include>
                     </div>
                     <div>
-                      <label for="imp-pa"><input type="checkbox" name="imp-pa" id="imp-pa">Passé</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé", "name":"tense", "value":"imp-passe"}'></include>
                     </div>
                   </div>
                 </div>
@@ -161,12 +160,12 @@
                   <h3>Subjonctif</h3>
                   <div class="flexbox-row">
                     <div>
-                      <label for="sub-pre"><input type="checkbox" name="sub-pre" id="sub-pre">Présent</label><br/>
-                      <label for="sub-pa"><input type="checkbox" name="sub-pa" id="sub-pa">Passé</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"sub-present"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé", "name":"tense", "value":"sub-passe"}'></include>
                     </div>
                     <div>
-                      <label for="sub-imp"><input type="checkbox" name="sub-imp" id="sub-imp">Imparfait</label><br/>
-                      <label for="sub-plus"><input type="checkbox" name="sub-plus" id="sub-plus">Plus-que-parfait</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Imparfait", "name":"tense", "value":"sub-imparfait"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Plus-que-parfait", "name":"tense", "value":"sub-plusqueparfait"}'></include>
                     </div>
                   </div>
                 </div>
@@ -174,11 +173,11 @@
                   <h3>Conditionnel</h3>
                   <div class="flexbox-row">
                     <div>
-                      <label for="con-pre"><input type="checkbox" name="con-pre" id="con-pre">Présent</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"con-present"}'></include>
                     </div>
                     <div>
-                      <label for="con-pa-1"><input type="checkbox" name="con-pa-1" id="con-pa-1">Passé 1</label><br/>
-                      <label for="con-pa-2"><input type="checkbox" name="con-pa-2" id="con-pa-2">Passé 2</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé 1", "name":"tense", "value":"con-passe1"}'></include><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé 2", "name":"tense", "value":"con-passe2"}'></include>
                     </div>
                   </div>
                 </div>
@@ -186,10 +185,10 @@
                   <h3>Participe</h3>
                   <div class="flexbox-row">
                     <div>
-                      <label for="par-pre"><input type="checkbox" name="par-pre" id="par-pre">Présent</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"par-present"}'></include>
                     </div>
                     <div>
-                      <label for="par-pa"><input type="checkbox" name="par-pa" id="par-pa">Passé</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé", "name":"tense", "value":"par-passe"}'></include>
                     </div>
                   </div>
                 </div>
@@ -197,10 +196,10 @@
                   <h3>Gérondif</h3>
                   <div class="flexbox-row">
                     <div>
-                      <label for="ger-pre"><input type="checkbox" name="ger-pre" id="ger-pre">Présent</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"ger-present"}'></include>
                     </div>
                     <div>
-                      <label for="ger-pa"><input type="checkbox" name="ger-pa" id="ger-pa">Passé</label><br/>
+                      <include src="components/switch.html" locals='{"label":"Passé", "name":"tense", "value":"ger-passe"}'></include>
                     </div>
                   </div>
                 </div>
@@ -214,14 +213,20 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-5 offset-1">
-            <h3>à propos</h3>
-            <p>Présentation</p>
+          <div class="col-6 offset-1">
+            <div class="background-color">
+              <h3>à propos</h3>
+              <p>Christophe Roulet est un enseignant qui a comme vocation de 
+                rendre accessible les verbes à tout le monde, gratuitement. 
+                C’est pourquoi il a commencé ce projet
+              </p>
+            </div>
           </div>
-          <div class="col-5">
-            <h3>contact</h3>
-            <a href="mailto:christophe.roulet@edu-vd.ch">christophe.roulet@edu-vd.ch</a><br/>
-            <a href="">Admin</a>
+          <div class="col-4">
+            <div class="background-color">
+              <h3>contact</h3>
+              <a href="mailto:christophe.roulet@edu-vd.ch">christophe.roulet@edu-vd.ch</a><br/>
+            </div>
           </div>
         </div>
       </div>
