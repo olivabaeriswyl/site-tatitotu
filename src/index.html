@@ -16,8 +16,10 @@
             <p>Défis de conjugaison</p>
           </div>
           <div class="col">
-            <label for="sobre"><input type="radio" id="sobre" name="style-choice" value="sobre"/> Style Sobre</label>
-            <label for="creative"><input type="radio" id="creative" name="style-choice" value="creative"/> Style Créatif</label>
+            <div class="form-choice">
+              <label for="sobre"><input type="radio" id="sobre" name="style-choice" value="sobre"/> Style Sobre</label>
+              <label for="creative"><input type="radio" id="creative" name="style-choice" value="creative"/> Style Créatif</label>
+            </div>
           </div>
         </div>
       </div>
@@ -27,164 +29,179 @@
       <div class="container">
         <div class="row">
           <div class="col-12 order-2 col-md-6 order-md-1">
-            <label for="practise-challenge"><button class="button large">Exercer</button></label>
-            <label for="print-challenge"><button class="button large">Imprimer</button></label>
+            <label for="practise-challenge"><button class="button large">Exercer <img src="img/edit-icon.svg" alt=""></button></label>
+            <label for="print-challenge"><button class="button large">Imprimer <img src="img/print-icon.svg" alt=""></button></label>
           </div>
           <div class="col-12 order-1 col-md-6 order-md-1">
-            <label for="help-website"><button class="button large">Besoin d'aide</button></label>
+            <label for="help-website"><button class="button large">Besoin d'aide <img src="img/question-icon.svg" alt=""></button></label>
           </div>
         </div>
         <div></div>
         <div class="row">
           <div class="col">
-            <label for="code"><input type="text" id="code" name="user-code" placeholder="Code à 8 chiffres..."></label>
-            <label for="load-challenge"><button class="button challenge">Charger mon défi</button></label>
-            <label for="save-challenge"><button class="button challenge">Sauvegarder mon défi</button></label>
-            <label for="presets"><button class="button challenge">Préréglages</button></label>
+            <div class="position-right">
+              <label for="code"><input type="text" id="code" name="user-code" placeholder="Code à 8 chiffres..." class="form typing"></label>
+              <label for="load-challenge"><button class="button challenge">Charger mon défi</button></label>
+              <label for="save-challenge"><button class="button challenge">Sauvegarder mon défi</button></label>
+              <label for="presets"><button class="button challenge">Préréglages</button></label>
+            </div>
           </div>
         </div>
         
         <div class="row">
           <div class="col-12 col-md-7">
             <div class="row">
-              <div class="col-12">
-                <div class="flexbox-row">
-                  <h2>Mes verbes</h2>
-                  <button>Tout supprimer</button>
+              <div class="background-color">
+                <div class="col-12">
+                  <div class="flexbox-row">
+                    <h2>Mes verbes</h2>
+                    <button class="button button-underline">Tout supprimer</button>
+                  </div>
                 </div>
+                <div class="col-5">
+                  <label for="add-verb"><input type="text" id="add-verb" name="add-verb" placeholder="Ajouter un verbe..." class="form typing"></label>
+                </div>
+                <div class="col-7">
               </div>
-              <div class="col-5">
-                <label for="add-verb"><input type="text" id="add-verb" name="add-verb" placeholder="Ajouter un verbe..."></label>
-              </div>
-              <div class="col-7">
-
               </div>
             </div>
           
 
             <div class="row">
-              <div class="col-12">
-                <h2>Options</h2>
-              </div>
-              <div class="col-5">
-                <p>
-                  Nombre de question<br>
-                  Type
-                </p>
-              </div>
-              <div class="col-7">
-                <label for="questions-number">
-                  <select name="questions-number" id="questions-number">
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                  </select>
-                </label><br/>
-                <label for="type-normal"><input type="radio" id="type-normal" name="type-choice" value="type-normal"/> Normal</label>
-                <label for="type-tenses"><input type="radio" id="type-tenses" name="type-choice" value="type-tenses"/> Trouver mode et temps</label>
-              </div>
-              <div class="col-12">
-                <h3>options d'impression</h3>
+              <div class="background-color">
+                <div class="col-12">
+                  <h2>Options</h2>
+                </div>
+                <div class="flexbox-row">
+                  <div class="col-5">
+                    <p>
+                      Nombre de question<br>
+                      Type
+                    </p>
+                  </div>
+                  <div class="col-7">
+                    <label for="questions-number">
+                      <select name="questions-number" id="questions-number" class="form-choice">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                      </select>
+                    </label><br/>
+                    <div class="form-choice">
+                      <label for="type-normal"><input type="radio" id="type-normal" name="type-choice" value="type-normal"/> Normal</label>
+                      <label for="type-tenses"><input type="radio" id="type-tenses" name="type-choice" value="type-tenses"/> Trouver mode et temps</label>
+                    </div>
+                  </div>
+                </div>
 
-              </div>
-              <div class="col-6">
-                <label for="printing-verbs-evaluated"><input type="checkbox" name="printing-verbs-evaluated" id="printing-verbs-evaluated">Afficher les verbes évalués</label><br/>
-                <label for="printing-tenses-evaluated"><input type="checkbox" name="printing-tenses-evaluated" id="printing-tenses-evaluated">Afficher les temps évalués</label><br/>
-                <label for="printing-inclusive-pronouns"><input type="checkbox" name="printing-inclusive-pronouns" id="printing-inclusive-pronouns">Afficher les pronoms inclusifs</label><br/>
-                <label for="printing-random-number"><input type="checkbox" name="printing-random-number" id="printing-random-number">Afficher le nombre aléatoire</label>
-              </div>
-              <div class="col-6">
-                <label for="printing-exam-note"><input type="checkbox" name="printing-exam-note" id="printing-exam-note">Espace pour la note</label><br/>
-                <label for="printing-first-name"><input type="checkbox" name="printing-first-name" id="printing-first-name">Espace pour le prénom</label><br/>
-                <label for="printing-name"><input type="checkbox" name="printing-name" id="printing-name">Espace pour le nom</label><br/>
-                <label for="printing-date"><input type="checkbox" name="printing-date" id="printing-date">Espace pour la date</label>
+                <div class="col-12">
+                  <h3>options d'impression</h3>
+                </div>
+                <div class="flexbox-row">
+                  <div class="col-6">
+                    <label for="printing-verbs-evaluated"><input type="checkbox" name="printing-verbs-evaluated" id="printing-verbs-evaluated">Afficher les verbes évalués</label><br/>
+                    <label for="printing-tenses-evaluated"><input type="checkbox" name="printing-tenses-evaluated" id="printing-tenses-evaluated">Afficher les temps évalués</label><br/>
+                    <label for="printing-inclusive-pronouns"><input type="checkbox" name="printing-inclusive-pronouns" id="printing-inclusive-pronouns">Afficher les pronoms inclusifs</label><br/>
+                    <label for="printing-random-number"><input type="checkbox" name="printing-random-number" id="printing-random-number">Afficher le nombre aléatoire</label>
+                  </div>
+                  <div class="col-6">
+                    <label for="printing-exam-note"><input type="checkbox" name="printing-exam-note" id="printing-exam-note">Espace pour la note</label><br/>
+                    <label for="printing-first-name"><input type="checkbox" name="printing-first-name" id="printing-first-name">Espace pour le prénom</label><br/>
+                    <label for="printing-name"><input type="checkbox" name="printing-name" id="printing-name">Espace pour le nom</label><br/>
+                    <label for="printing-date"><input type="checkbox" name="printing-date" id="printing-date">Espace pour la date</label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-12 col-md-5">
-            <div class="row">
-              <div class="col">
-                <div class="flexbox-row">
-                  <h2>Mes temps</h2>
-                  <button>Tout cocher</button>
-                  <button>Tout décocher</button>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <h3>Indicatif</h3>
-                <div class="flexbox-row">
-                  <div>
-                    <label for="ind-pre"><input type="checkbox" name="ind-pre" id="ind-pre">Présent</label><br/>
-                    <label for="ind-imp"><input type="checkbox" name="ind-imp" id="ind-imp">Imparfait</label><br/>
-                    <label for="ind-fu"><input type="checkbox" name="ind-fu" id="ind-fu">Futur</label><br/>
-                    <label for="ind-pa-s"><input type="checkbox" name="ind-pa-s" id="ind-pa-s">Passé simple</label><br/>
-                  </div>
-                  <div>
-                    <label for="ind-pa-c"><input type="checkbox" name="ind-pa-c" id="ind-pa-c">Passé composé</label><br/>
-                    <label for="ind-plus"><input type="checkbox" name="ind-plus" id="ind-plus">Plus-que-parfait</label><br/>
-                    <label for="ind-fu-ant"><input type="checkbox" name="ind-fu-ant" id="ind-fu-ant">Futur antérieur</label><br/>
-                    <label for="ind-pa-ant"><input type="checkbox" name="ind-pa-ant" id="ind-pa-ant">Passé antérieur</label><br/>
+            <div class="background-color">
+              <div class="row">
+                <div class="col">
+                  <div class="flexbox-row">
+                    <h2>Mes temps</h2>
+                    <button class="button button-underline">Tout cocher</button>
+                    <button class="button button-underline">Tout décocher</button>
                   </div>
                 </div>
               </div>
-              <div class="col-12">
-                <h3>Impératif</h3>
-                <div class="flexbox-row">
-                  <div>
-                    <label for="imp-pre"><input type="checkbox" name="imp-pre" id="imp-pre">Présent</label><br/>
-                  </div>
-                  <div>
-                    <label for="imp-pa"><input type="checkbox" name="imp-pa" id="imp-pa">Passé</label><br/>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <h3>Subjonctif</h3>
-                <div class="flexbox-row">
-                  <div>
-                    <label for="sub-pre"><input type="checkbox" name="sub-pre" id="sub-pre">Présent</label><br/>
-                    <label for="sub-pa"><input type="checkbox" name="sub-pa" id="sub-pa">Passé</label><br/>
-                  </div>
-                  <div>
-                    <label for="sub-imp"><input type="checkbox" name="sub-imp" id="sub-imp">Imparfait</label><br/>
-                    <label for="sub-plus"><input type="checkbox" name="sub-plus" id="sub-plus">Plus-que-parfait</label><br/>
+              <div class="row">
+                <div class="col-12">
+                  <h3>Indicatif</h3>
+                  <div class="flexbox-row">
+                    <div>
+                      <include src="components/switch.html" locals='{"label":"Présent", "name":"tense", "value":"present"}'></include>
+                      <include src="components/switch.html" locals='{"label":"Imparfait", "name":"tense", "value":"imparfait"}'></include>
+                      <label for="ind-pre"><input type="checkbox" name="ind-pre" id="ind-pre">Présent</label><br/>
+                      <label for="ind-imp"><input type="checkbox" name="ind-imp" id="ind-imp">Imparfait</label><br/>
+                      <label for="ind-fu"><input type="checkbox" name="ind-fu" id="ind-fu">Futur</label><br/>
+                      <label for="ind-pa-s"><input type="checkbox" name="ind-pa-s" id="ind-pa-s">Passé simple</label><br/>
+                    </div>
+                    <div>
+                      <label for="ind-pa-c"><input type="checkbox" name="ind-pa-c" id="ind-pa-c">Passé composé</label><br/>
+                      <label for="ind-plus"><input type="checkbox" name="ind-plus" id="ind-plus">Plus-que-parfait</label><br/>
+                      <label for="ind-fu-ant"><input type="checkbox" name="ind-fu-ant" id="ind-fu-ant">Futur antérieur</label><br/>
+                      <label for="ind-pa-ant"><input type="checkbox" name="ind-pa-ant" id="ind-pa-ant">Passé antérieur</label><br/>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <h3>Conditionnel</h3>
-                <div class="flexbox-row">
-                  <div>
-                    <label for="con-pre"><input type="checkbox" name="con-pre" id="con-pre">Présent</label><br/>
-                  </div>
-                  <div>
-                    <label for="con-pa-1"><input type="checkbox" name="con-pa-1" id="con-pa-1">Passé 1</label><br/>
-                    <label for="con-pa-2"><input type="checkbox" name="con-pa-2" id="con-pa-2">Passé 2</label><br/>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <h3>Participe</h3>
-                <div class="flexbox-row">
-                  <div>
-                    <label for="par-pre"><input type="checkbox" name="par-pre" id="par-pre">Présent</label><br/>
-                  </div>
-                  <div>
-                    <label for="par-pa"><input type="checkbox" name="par-pa" id="par-pa">Passé</label><br/>
+                <div class="col-12">
+                  <h3>Impératif</h3>
+                  <div class="flexbox-row">
+                    <div>
+                      <label for="imp-pre"><input type="checkbox" name="imp-pre" id="imp-pre">Présent</label><br/>
+                    </div>
+                    <div>
+                      <label for="imp-pa"><input type="checkbox" name="imp-pa" id="imp-pa">Passé</label><br/>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <h3>Gérondif</h3>
-                <div class="flexbox-row">
-                  <div>
-                    <label for="ger-pre"><input type="checkbox" name="ger-pre" id="ger-pre">Présent</label><br/>
+                <div class="col-12">
+                  <h3>Subjonctif</h3>
+                  <div class="flexbox-row">
+                    <div>
+                      <label for="sub-pre"><input type="checkbox" name="sub-pre" id="sub-pre">Présent</label><br/>
+                      <label for="sub-pa"><input type="checkbox" name="sub-pa" id="sub-pa">Passé</label><br/>
+                    </div>
+                    <div>
+                      <label for="sub-imp"><input type="checkbox" name="sub-imp" id="sub-imp">Imparfait</label><br/>
+                      <label for="sub-plus"><input type="checkbox" name="sub-plus" id="sub-plus">Plus-que-parfait</label><br/>
+                    </div>
                   </div>
-                  <div>
-                    <label for="ger-pa"><input type="checkbox" name="ger-pa" id="ger-pa">Passé</label><br/>
+                </div>
+                <div class="col-12">
+                  <h3>Conditionnel</h3>
+                  <div class="flexbox-row">
+                    <div>
+                      <label for="con-pre"><input type="checkbox" name="con-pre" id="con-pre">Présent</label><br/>
+                    </div>
+                    <div>
+                      <label for="con-pa-1"><input type="checkbox" name="con-pa-1" id="con-pa-1">Passé 1</label><br/>
+                      <label for="con-pa-2"><input type="checkbox" name="con-pa-2" id="con-pa-2">Passé 2</label><br/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <h3>Participe</h3>
+                  <div class="flexbox-row">
+                    <div>
+                      <label for="par-pre"><input type="checkbox" name="par-pre" id="par-pre">Présent</label><br/>
+                    </div>
+                    <div>
+                      <label for="par-pa"><input type="checkbox" name="par-pa" id="par-pa">Passé</label><br/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <h3>Gérondif</h3>
+                  <div class="flexbox-row">
+                    <div>
+                      <label for="ger-pre"><input type="checkbox" name="ger-pre" id="ger-pre">Présent</label><br/>
+                    </div>
+                    <div>
+                      <label for="ger-pa"><input type="checkbox" name="ger-pa" id="ger-pa">Passé</label><br/>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,52 @@
+.typing {
+  border: none;
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  background: none;
+  padding: 10px 0 5px;
+}
+
+
+.form-choice {
+  border: solid 2px black;
+  display: block;
+  text-align: end;
+}
+
+main .form-choice {
+  border: solid 2px var(--button-color);
+}
+
+
+.switch-wrapper {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  border-radius: 10px;
+  background: white;
+  border: solid 2px var(--button-switch);
+}
+
+.switch-inner {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: white;
+  transition: margin 1s;
+  border: solid 2px var(--button-switch);
+  margin-left: -2px;
+}
+
+input:checked + .switch-wrapper {
+  background: var(--button-switch);
+}
+
+input:checked + .switch-wrapper .switch-inner {
+  margin-left: 10px;
+  border-color: white;
+}
+
+.switch input {
+  display: none;
+}
+
