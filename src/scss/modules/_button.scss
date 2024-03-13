@@ -8,6 +8,7 @@ label {
   cursor: pointer;
 }
 
+// Challenge button
 .button.challenge {
   background-color: var(--button-color);
   transition: 0.5s background ease;
@@ -27,6 +28,7 @@ label {
   margin: 0 20px;
 }
 
+//
 .button.large {
   color: white;
   padding: 6px 10px;
@@ -39,6 +41,7 @@ label {
   color: black;
 }
 
+// Underline button
 .button-underline {
   background: none;
   text-decoration: underline;
