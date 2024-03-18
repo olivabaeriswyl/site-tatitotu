@@ -1,5 +1,6 @@
 .flexbox-row {
   display: flex;
+  justify-content: space-between;
 }
 
 .position-right {
@@ -11,4 +12,9 @@
   background: rgb(255, 255, 255);
   margin-top: 40px;
   padding: 20px 30px 30px;
+}
+
+.flexbox-info {
+  display: flex;
+  justify-content: space-between;
 }

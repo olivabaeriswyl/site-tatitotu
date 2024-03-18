@@ -45,18 +45,23 @@
       <div class="container">
         <div class="row">
           <div class="col-12 order-2 col-md-6 order-md-1">
-            <label for="practise-challenge">
-              <button class="button large">
-                Exercer
-                <include src="components/edit-icon.html"></include>
-              </button>
-            </label>
-            <label for="print-challenge">
-              <button class="button large">
-                Imprimer <include src="components/print-icon.html"></include>
-              </button>
-            </label>
-            <img src="img/underline.png" alt="" />
+            <div class="flexbox-button">
+              <div>
+                <label for="practise-challenge">
+                  <button class="button large">
+                    Exercer
+                    <include src="components/edit-icon.html"></include>
+                  </button>
+                </label>
+                <label for="print-challenge">
+                  <button class="button large">
+                    Imprimer
+                    <include src="components/print-icon.html"></include>
+                  </button>
+                </label>
+              </div>
+              <img src="img/underline.png" alt="" />
+            </div>
           </div>
           <div class="col-12 order-1 col-md-6 order-md-1">
             <div class="position-right">
@@ -86,15 +91,18 @@
               <label for="save-challenge" class="save-challenge">
                 <button class="button challenge">Sauvegarder mon défi</button>
               </label>
-              <label for="presets">
-                <button class="button challenge">Préréglages</button>
-              </label>
+              <div class="settings">
+                <label for="presets">
+                  <button class="button challenge">Préréglages</button>
+                  <div class="settings-window">caca</div>
+                </label>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-12 col-md-7">
+          <div class="col-12 col-lg-7">
             <div class="row">
               <div class="background-color">
                 <div class="col-12">
@@ -177,39 +185,55 @@
                     <include
                       src="components/switch.html"
                       locals='{"label":"Afficher les verbes évalués", "name":"print", "value":"print-verb-evaluted"}'
-                    ></include
-                    ><br />
+                    ></include>
+                    <br />
                     <include
                       src="components/switch.html"
                       locals='{"label":"Afficher les temps évalués", "name":"print", "value":"print-tenses-evaluated"}'
-                    ></include
-                    ><br />
-                    <include
-                      src="components/switch.html"
-                      locals='{"label":"Afficher les pronoms inclusifs", "name":"print", "value":"print-inclusive-pronouns"}'
-                    ></include
-                    ><br />
-                    <include
-                      src="components/switch.html"
-                      locals='{"label":"Afficher le nombre aléatoire", "name":"print", "value":"print-random-number"}'
                     ></include>
+                    <br />
+                    <div class="flexbox-info">
+                      <include
+                        src="components/switch.html"
+                        locals='{"label":"Afficher les pronoms inclusifs", "name":"print", "value":"print-inclusive-pronouns"}'
+                      ></include>
+                      <div class="tooltip">
+                        <img src="img/info-icon.svg" alt="i" />
+                        <div class="tooltip-window">il/elle/iel</div>
+                      </div>
+                    </div>
+
+                    <br />
+                    <div class="flexbox-info">
+                      <include
+                        src="components/switch.html"
+                        locals='{"label":"Afficher le nombre aléatoire", "name":"print", "value":"print-random-number"}'
+                      ></include>
+                      <div class="tooltip">
+                        <img src="img/info-icon.svg" alt="i" />
+                        <div class="tooltip-window">
+                          Permet de retrouver facilement quel corrigé va avec
+                          quel questionnaire
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-6">
                     <include
                       src="components/switch.html"
                       locals='{"label":"Espace pour la note", "name":"tense", "value":"print-exam-note"}'
-                    ></include
-                    ><br />
+                    ></include>
+                    <br />
                     <include
                       src="components/switch.html"
                       locals='{"label":"Espace pour le prénom", "name":"tense", "value":"print-first-name"}'
-                    ></include
-                    ><br />
+                    ></include>
+                    <br />
                     <include
                       src="components/switch.html"
                       locals='{"label":"Espace pour le nom", "name":"tense", "value":""}'
-                    ></include
-                    ><br />
+                    ></include>
+                    <br />
                     <include
                       src="components/switch.html"
                       locals='{"label":"Espace pour la date", "name":"tense", "value":""}'
@@ -220,16 +244,20 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-5">
+          <div class="col-12 col-lg-5">
             <div class="background-color">
               <div class="row">
                 <div class="col">
                   <div class="flexbox-row">
                     <h2>Mes temps</h2>
-                    <button class="button button-underline">Tout cocher</button>
-                    <button class="button button-underline">
-                      Tout décocher
-                    </button>
+                    <div class="underline-button-margin">
+                      <button class="button button-underline">
+                        Tout décocher
+                      </button>
+                      <button class="button button-underline">
+                        Tout cocher
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -238,146 +266,279 @@
                   <h3>Indicatif</h3>
                   <div class="row">
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Présent", "name":"tense", "value":"present"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Présent", "name":"tense", "value":"present"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Je mange</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Imparfait", "name":"tense", "value":"imparfait"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Imparfait", "name":"tense", "value":"imparfait"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Je mangeais</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Futur", "name":"tense", "value":"futur"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Futur", "name":"tense", "value":"futur"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Je mangerai</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé simple", "name":"tense", "value":"passesimple"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé simple", "name":"tense", "value":"passesimple"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Je mangeai</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé composé", "name":"tense", "value":"passecompose"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé composé", "name":"tense", "value":"passecompose"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: J'ai mangé</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Plus-que-parfait", "name":"tense", "value":"plusqueparfait"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Plus-que-parfait", "name":"tense", "value":"plusqueparfait"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: J'avais mangé</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Futur antérieur", "name":"tense", "value":"futuranterieur"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Futur antérieur", "name":"tense", "value":"futuranterieur"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: J'aurai mangé</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé antérieur", "name":"tense", "value":"passeanterieur"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé antérieur", "name":"tense", "value":"passeanterieur"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: J'eus mangé</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12">
                   <h3>Impératif</h3>
                   <div class="row">
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Présent", "name":"tense", "value":"imp-present"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Présent", "name":"tense", "value":"imp-present"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Mange !</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé", "name":"tense", "value":"imp-passe"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé", "name":"tense", "value":"imp-passe"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Aie mangé !</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12">
                   <h3>Subjonctif</h3>
                   <div class="row">
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Présent", "name":"tense", "value":"sub-present"}'
-                      ></include
-                      ><br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé", "name":"tense", "value":"sub-passe"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Présent", "name":"tense", "value":"sub-present"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Que je mange</div>
+                        </div>
+                      </div>
+                      <br />
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Imparfait", "name":"tense", "value":"sub-imparfait"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Que je mangeasse</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Imparfait", "name":"tense", "value":"sub-imparfait"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé", "name":"tense", "value":"sub-passe"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Que j'aie mangé</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Plus-que-parfait", "name":"tense", "value":"sub-plusqueparfait"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Plus-que-parfait", "name":"tense", "value":"sub-plusqueparfait"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">
+                            Ex: Que j'eusse mangé
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12">
                   <h3>Conditionnel</h3>
                   <div class="row">
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Présent", "name":"tense", "value":"con-present"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Présent", "name":"tense", "value":"con-present"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: Je mangerais</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé 1", "name":"tense", "value":"con-passe1"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé 1", "name":"tense", "value":"con-passe1"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: J'aurais mangé</div>
+                        </div>
+                      </div>
                       <br />
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé 2", "name":"tense", "value":"con-passe2"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé 2", "name":"tense", "value":"con-passe2"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: J'eusse mangé</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12">
                   <h3>Participe</h3>
                   <div class="row">
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Présent", "name":"tense", "value":"par-present"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Présent", "name":"tense", "value":"par-present"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: mangeant</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé", "name":"tense", "value":"par-passe"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé", "name":"tense", "value":"par-passe"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: mangé</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="col-12">
                   <h3>Gérondif</h3>
                   <div class="row">
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Présent", "name":"tense", "value":"ger-present"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Présent", "name":"tense", "value":"ger-present"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: En mangeant</div>
+                        </div>
+                      </div>
                     </div>
                     <div class="col-6">
-                      <include
-                        src="components/switch.html"
-                        locals='{"label":"Passé", "name":"tense", "value":"ger-passe"}'
-                      ></include>
+                      <div class="flexbox-info">
+                        <include
+                          src="components/switch.html"
+                          locals='{"label":"Passé", "name":"tense", "value":"ger-passe"}'
+                        ></include>
+                        <div class="tooltip">
+                          <img src="img/info-icon.svg" alt="i" />
+                          <div class="tooltip-window">Ex: En ayant mangé</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -391,17 +552,17 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-6 offset-1">
+          <div class="col-12 col-md-6 offset-md-1">
             <div class="background-color">
               <h3>à propos</h3>
               <p>
                 Christophe Roulet est un enseignant qui a comme vocation de
                 rendre accessible les verbes à tout le monde, gratuitement.
-                C’est pourquoi il a commencé ce projet
+                C’est pourquoi il a mis en place ce projet.
               </p>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-md-4">
             <div class="background-color">
               <h3>contact</h3>
               <a href="mailto:christophe.roulet@edu-vd.ch"

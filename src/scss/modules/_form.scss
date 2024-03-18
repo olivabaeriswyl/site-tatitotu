@@ -6,17 +6,13 @@
   padding: 10px 0 5px;
 }
 
-
 .form-choice {
-  border: solid 2px black;
-  display: block;
-  text-align: end;
+  display: flex;
 }
 
-main .form-choice {
-  border: solid 2px var(--button-color);
+header .form-choice {
+  justify-content: end;
 }
-
 
 .switch {
   margin-right: 20px;
@@ -53,4 +49,3 @@ input:checked + .switch-wrapper .switch-inner {
 .switch input {
   display: none;
 }
-

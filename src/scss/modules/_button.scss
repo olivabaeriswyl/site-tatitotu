@@ -28,7 +28,7 @@ label {
   margin: 0 20px;
 }
 
-//
+// Big top button
 .button.large {
   color: white;
   padding: 6px 10px;
@@ -41,12 +41,6 @@ label {
   color: black;
 }
 
-// Underline button
-.button-underline {
-  background: none;
-  text-decoration: underline;
-}
-
 .button svg {
   --color: white;
 }
@@ -55,6 +49,17 @@ label {
   --color: black;
 }
 
+// Underline button
+.button-underline {
+  background: none;
+  text-decoration: underline;
+}
+
+.underline-button-margin {
+  margin-top: 11px;
+}
+
+// Radio
 .radio-placeholder {
   display: inline-block;
   background: #f7a577;
@@ -79,6 +84,16 @@ main input:checked + .radio-placeholder {
   color: black;
 }
 
+.radio-placeholder {
+  border: solid 2px black;
+}
+
+main .radio-placeholder {
+  border: solid 2px var(--button-color);
+}
+
+// Number
 .question-number {
   padding: 5px 8px;
+  border: solid 2px var(--button-color);
 }
