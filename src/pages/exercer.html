@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tatitotu - exercer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/main.scss" />
+    <link rel="stylesheet" href="https://use.typekit.net/ivz0rki.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Tatitotu</h1>
+            <p>Défis de conjugaison</p>
+          </div>
+          <div class="col">
+            <div class="form-choice">
+              <label for="sobre" class="radio">
+                <input
+                  type="radio"
+                  id="sobre"
+                  name="style-choice"
+                  value="sobre"
+                />
+                <div class="radio-placeholder">Style Sobre</div>
+              </label>
+              <label for="creative" class="radio">
+                <input
+                  type="radio"
+                  id="creative"
+                  name="style-choice"
+                  value="creative"
+                />
+                <div class="radio-placeholder">Style Créatif</div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="exercise-ornement">
+            <div class="col-12 col-md-8 offset-md-2">
+              <div class="exercise-background">
+                <a href="../index.html"><img src="../img/cross-icon.svg" alt=""></a>
+                <h2>Exercer</h2>
+                  <div class="exercise-flexbox">
+                    <p>Nous avoir passé simple (indicatif)</p>
+                    <label for="code" class="code-challenge">
+                      <input
+                        type="text"
+                        id="code"
+                        name="user-code"
+                        placeholder="Écrire..."
+                        class="form typing"
+                    /></label>
+                    <button class="button challenge">Vérifier</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 offset-md-1">
+            <div class="background-color">
+              <h3>à propos</h3>
+              <p>
+                Christophe Roulet est un enseignant qui a comme vocation de
+                rendre accessible les verbes à tout le monde, gratuitement.
+                C’est pourquoi il a mis en place ce projet.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="background-color">
+              <h3>contact</h3>
+              <a href="mailto:christophe.roulet@edu-vd.ch"
+                >christophe.roulet@edu-vd.ch</a
+              ><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js" type="module"></script>
+  </body>
+</html>
