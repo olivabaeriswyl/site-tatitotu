@@ -9,9 +9,14 @@
 }
 
 .exercise-ornement {
-  background: url(../img/ornement-white.png), url(../img/ornement-yellow.png);
+  background: url(../img/ornement-exercise.png);
   background-position: center;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
-  padding: 40px 20px;
+  padding: 140px 60px;
+}
+
+.flexbox-right-exercise {
+  display: flex;
+  justify-content: end;
 }
