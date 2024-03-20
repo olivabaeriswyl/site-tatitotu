@@ -1,0 +1,13 @@
+.verb-card {
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.display-verb-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}

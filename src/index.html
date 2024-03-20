@@ -93,7 +93,7 @@
               </label>
               <label for="presets" class="settings">
                 <button class="button challenge">Préréglages</button>
-                <div class="settings-window">caca</div>
+                <div class="settings-window"></div>
               </label>
             </div>
           </div>
@@ -111,17 +111,34 @@
                     </button>
                   </div>
                 </div>
-                <div class="col-5">
-                  <label for="add-verb"
-                    ><input
-                      type="text"
-                      id="add-verb"
-                      name="add-verb"
-                      placeholder="Ajouter un verbe..."
-                      class="form typing"
-                  /></label>
+                <div class="row">
+                  <div class="col-5">
+                    <label for="add-verb"
+                      ><input
+                        type="text"
+                        id="add-verb"
+                        name="add-verb"
+                        placeholder="Ajouter un verbe..."
+                        class="form typing"
+                    /></label>
+                  </div>
+                  <div class="col-7">
+                    <div class="display-verb-card">
+                      <div class="verb-card">
+                        <p>Avoir</p>
+                        <img src="img/close-square-icon.svg" alt="x" />
+                      </div>
+                      <div class="verb-card">
+                        <p>Être</p>
+                        <img src="img/close-square-icon.svg" alt="x" />
+                      </div>
+                      <div class="verb-card">
+                        <p>Dormir</p>
+                        <img src="img/close-square-icon.svg" alt="x" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-7"></div>
               </div>
             </div>
 
@@ -132,10 +149,8 @@
                 </div>
                 <div class="flexbox-row">
                   <div class="col-5">
-                    <p>
-                      Nombre de question<br />
-                      Type
-                    </p>
+                    <p>Nombre de question</p>
+                    <p class="option-type-margin">Type</p>
                   </div>
                   <div class="col-7">
                     <label for="questions-number">

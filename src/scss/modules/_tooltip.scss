@@ -5,10 +5,14 @@
   opacity: 0;
   pointer-events: none;
   padding: 10px;
+  min-width: 180px;
+  transform: translateX(-50%);
+  transition: opacity 0.5s;
 }
 
 .tooltip {
   position: relative;
+  margin-right: 5px;
 }
 
 .tooltip:hover {

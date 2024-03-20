@@ -9,6 +9,9 @@
 }
 
 .exercise-ornement {
-  background: url(../../img/ornement-white.png);
-  background: url(../../img/ornement-yellow.png);
+  background: url(../img/ornement-white.png), url(../img/ornement-yellow.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
 }
