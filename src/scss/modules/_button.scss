@@ -34,9 +34,6 @@ label {
   padding: 6px 10px;
   background-color: var(--button-hover-color);
   transition: 0.5s background ease;
-  // display: flex;
-  // align-items: center;
-  // gap: 5px;
 }
 
 .button.large:hover {
@@ -54,6 +51,12 @@ label {
 
 button.large a {
   text-decoration: none;
+}
+
+.flexbox-button-top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 // Underline button

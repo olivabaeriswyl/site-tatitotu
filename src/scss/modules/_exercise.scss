@@ -13,10 +13,30 @@
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  padding: 140px 60px;
+  padding: 160px 60px;
 }
 
 .flexbox-right-exercise {
   display: flex;
   justify-content: end;
+}
+
+body.sober {
+  .exercise-background {
+    background: white;
+  }
+
+  .exercise-ornement {
+    background: #f7a577;
+  }
+
+  header {
+    background: #fae290;
+    border-bottom: solid 5px white;
+  }
+
+  footer {
+    background: #fae290;
+    border-top: solid 5px white;
+  }
 }
