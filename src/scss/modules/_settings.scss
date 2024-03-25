@@ -1,13 +1,17 @@
 .settings-window {
-  background-color: var(--button-color);
+  background-color: black;
+  color: white;
   position: absolute;
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  right: 1;
   padding: 10px;
 }
 
 .settings {
   position: relative;
+  margin-right: 5px;
 }
 
 .settings:hover {
