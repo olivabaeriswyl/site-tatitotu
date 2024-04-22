@@ -13,7 +13,8 @@ creativeInput.addEventListener("change", function () {
 });
 
 var checkAllTrigger = document.querySelector(".check-all");
-var checkboxes = document.querySelectorAll(".checkbox");
+var uncheckAllTrigger = document.querySelector(".uncheck-all");
+var checkboxes = document.querySelectorAll(".my-tenses .checkbox");
 
 var checkAll = function () {
   checkboxes.forEach((checkbox) => {
@@ -21,12 +22,19 @@ var checkAll = function () {
   });
 };
 
-checkAllTrigger.addEventListener("click", checkAll);
-
-var checkAll = function () {
+var uncheckAll = function () {
   checkboxes.forEach((checkbox) => {
     checkbox.checked = false;
   });
 };
 
 checkAllTrigger.addEventListener("click", checkAll);
+uncheckAllTrigger.addEventListener("click", uncheckAll);
+
+// var checkAll = function () {
+//   checkboxes.forEach((checkbox) => {
+//     checkbox.checked = false;
+//   });
+// };
+
+// checkAllTrigger.addEventListener("click", checkAll);
