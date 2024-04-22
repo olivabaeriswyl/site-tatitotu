@@ -9,6 +9,10 @@
   padding: 10px;
 }
 
+.settings-window a:hover {
+  color: #fae290;
+}
+
 .settings {
   position: relative;
   margin-right: 5px;
@@ -16,6 +20,54 @@
 
 .settings:hover {
   .settings-window {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.precise-settings-window {
+  background-color: black;
+  color: white;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  padding: 10px;
+  left: -130;
+  right: 115;
+  top: 0;
+}
+
+.settings-window-year:hover {
+  .precise-settings-window.year {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.settings-window-group:hover {
+  .precise-settings-window.group {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.settings-window-hard:hover {
+  .precise-settings-window.hard {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.settings-window-pronominal:hover {
+  .precise-settings-window.pronominal {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.settings-window-cif:hover {
+  .precise-settings-window.cif {
     opacity: 1;
     pointer-events: all;
   }
